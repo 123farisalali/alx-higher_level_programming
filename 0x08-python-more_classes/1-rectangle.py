@@ -1,12 +1,24 @@
 #!/usr/bin/python3
-"""1-rectangle
+"""1-rectangle, built for Holberton Python project 0x08 task 1.
 """
 
+
 class Rectangle:
-     """At this stage the class only creates private instance attributes by
+    """At this stage the class only creates private instance attributes by
     taking in two arguments.
-     """
-     def width(self):
+
+    Args:
+        width (int): horizontal dimension of rectangle, defaults to 0
+        height (int): vertical dimension of rectangle, defaults to 0
+
+    """
+    def __init__(self, width=0, height=0):
+        # attribute assigment here engages setters defined below
+        self.width = width
+        self.height = height
+
+    @property
+    def width(self):
         """__width getter.
 
         Returns:
